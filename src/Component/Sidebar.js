@@ -48,8 +48,8 @@ const Sidebar = () => {
             <MdOutlineDashboard size={20} />
             <span>Marketplace</span>
           </Link>
-          <Link className="flex items-center space-x-3 p-3 text-gray-600 hover:text-black" to="/favourites">
-            <FaHeart size={18} />
+          <Link className="flex items-center space-x-3 p-3 bg-black text-white" to="/Favourite">
+          <MdOutlineDashboard size={20} />
             <span>Favourites</span>
           </Link>
           <Link className="flex items-center space-x-3 p-3 text-gray-600 hover:text-black" to="/cart">

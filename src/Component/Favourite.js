@@ -3,9 +3,10 @@ import { Search } from "lucide-react";
 import TabNavigation from "./TabNavigation";
 import CollectionsTable from "./Collection";
 import NFTCard from "./NftCard";
-import CreatorsPage from "./Creatorpage";
+import FollowCreators from "./FollowCreator";
+import TabNavigationFavourite from "./TabSwictchFavourite";
 
-const MarketplacePage = () => {
+const FavouritePlace = () => {
   const [activeTab, setActiveTab] = useState("NFTs");
   const [selectedPrice, setSelectedPrice] = useState("Price Low to High");
 
@@ -151,7 +152,7 @@ const MarketplacePage = () => {
   return (
     <div className="p-6">
       {/* Fixed Tab Navigation */}
-      <TabNavigation onTabChange={handleTabChange} activeTab={activeTab} />
+      <TabNavigationFavourite onTabChange={handleTabChange} activeTab={activeTab} />
 
       {/* Show search bar & filters only for NFTs tab */}
       {activeTab === "NFTs" && (
@@ -195,9 +196,9 @@ const MarketplacePage = () => {
       )}
 
       {activeTab === "Collections" && <CollectionsTable />}
-      {activeTab === "Creators" && <CreatorsPage />}
+      {activeTab === "Follow Creators" && <FollowCreators />}
     </div>
   );
 };
 
-export default MarketplacePage;
+export default FavouritePlace;
