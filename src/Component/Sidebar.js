@@ -60,7 +60,7 @@ const SideBar = () => {
             <FaGavel size={18} />
             <span>Current Bids</span>
           </Link>
-          <Link className="flex items-center space-x-3 p-3 text-gray-600 hover:text-black" to="/create-nft">
+          <Link className="flex items-center space-x-3 p-3 text-gray-600 hover:text-black" to="/CreateNff">
             <FaPlusSquare size={18} />
             <span>Create NFT</span>
           </Link>
