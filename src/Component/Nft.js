@@ -4,6 +4,7 @@ import TabNavigation from "./TabNavigation";
 import CollectionsTable from "./Collection";
 import NFTCard from "./NftCard";
 import CreatorsPage from "./Creatorpage";
+import SwiperComponent from "./SwiperComponent";
 
 const MarketplacePage = () => {
   const [activeTab, setActiveTab] = useState("NFTs");
@@ -109,39 +110,7 @@ const MarketplacePage = () => {
         "https://www.shutterstock.com/image-illustration/robot-crash-test-dummy-sitting-600nw-2051238215.jpg",
       isVerified: true,
     },
-    {
-      id: 2,
-      title: "Felly - Sweet Unknown",
-      artist: "Departed161",
-      currentBid: "0.0005 ETH",
-      yourBid: "0.00055 ETH",
-      volume: "12 ETH",
-      imageUrl:
-        "https://www.shutterstock.com/image-illustration/robot-crash-test-dummy-sitting-600nw-2051238215.jpg",
-      isVerified: true,
-    },
-    {
-      id: 1,
-      title: "Felly - Sweet Unknown",
-      artist: "Departed161",
-      currentBid: "0.0005 ETH",
-      yourBid: "0.00055 ETH",
-      volume: "12 ETH",
-      imageUrl:
-        "https://www.shutterstock.com/image-illustration/robot-crash-test-dummy-sitting-600nw-2051238215.jpg",
-      isVerified: true,
-    },
-    {
-      id: 2,
-      title: "Felly - Sweet Unknown",
-      artist: "Departed161",
-      currentBid: "0.0005 ETH",
-      yourBid: "0.00055 ETH",
-      volume: "12 ETH",
-      imageUrl:
-        "https://www.shutterstock.com/image-illustration/robot-crash-test-dummy-sitting-600nw-2051238215.jpg",
-      isVerified: true,
-    },
+    
   ];
 
   const handleTabChange = (tab) => {
@@ -149,8 +118,12 @@ const MarketplacePage = () => {
   };
 
   return (
+    <>
+   
+   
     <div className="p-6">
       {/* Fixed Tab Navigation */}
+      
       <TabNavigation onTabChange={handleTabChange} activeTab={activeTab} />
 
       {/* Show search bar & filters only for NFTs tab */}
@@ -197,6 +170,7 @@ const MarketplacePage = () => {
       {activeTab === "Collections" && <CollectionsTable />}
       {activeTab === "Creators" && <CreatorsPage />}
     </div>
+    </>
   );
 };
 

@@ -12,7 +12,7 @@ import {
 import { IoHelpCircleOutline } from "react-icons/io5";
 import { MdOutlineDashboard } from "react-icons/md";
 
-const Sidebar = () => {
+const SideBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -27,7 +27,7 @@ const Sidebar = () => {
 
       {/* Sidebar Container */}
       <div
-        className={`fixed md:relative top-0 left-0 w-64 h-screen bg-gray-50 p-5 flex flex-col shadow-lg rounded-r-lg font-sans transform ${
+        className={`fixed md:relative top-0 left-0 w-64 h-screen bg-gray-50 p-5 flex flex-col shadow-lg rounded-r-lg transform ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         } md:translate-x-0 transition-transform duration-300`}
       >
@@ -48,8 +48,8 @@ const Sidebar = () => {
             <MdOutlineDashboard size={20} />
             <span>Marketplace</span>
           </Link>
-          <Link className="flex items-center space-x-3 p-3 bg-black text-white" to="/Favourite">
-          <MdOutlineDashboard size={20} />
+          <Link className="flex items-center space-x-3 p-3 text-gray-600 hover:text-black" to="/favourite">
+            <FaHeart size={18} />
             <span>Favourites</span>
           </Link>
           <Link className="flex items-center space-x-3 p-3 text-gray-600 hover:text-black" to="/cart">
@@ -60,7 +60,7 @@ const Sidebar = () => {
             <FaGavel size={18} />
             <span>Current Bids</span>
           </Link>
-          <Link className="flex items-center space-x-3 p-3 text-gray-600 hover:text-black" to="/create">
+          <Link className="flex items-center space-x-3 p-3 text-gray-600 hover:text-black" to="/create-nft">
             <FaPlusSquare size={18} />
             <span>Create NFT</span>
           </Link>
@@ -98,4 +98,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default SideBar;
